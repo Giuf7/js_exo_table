@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+}
+
+#conteneur {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#commandes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#commandes button {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+#commandes button:hover {
+    background-color: #2980b9;
+}
+
+#plateau_dame {
+    border-collapse: collapse;
+    border: 5px solid #363635;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+td {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+}
+
+
+tr:nth-child(odd) td:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+
+tr:nth-child(odd) td:nth-child(even) {
+    background-color: #181512;
+}
+
+tr:nth-child(even) td:nth-child(odd) {
+    background-color: #181512;
+}
+
+tr:nth-child(even) td:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.pion {
+    width: 46px;
+    height: 46px;
+    background-color: #393634;
+    margin: auto;
+
+    /* Tes propriétés de découpe et de forme circulaire */
+    clip-path: circle(50%);
+    shape-outside: circle(50%);
+}
